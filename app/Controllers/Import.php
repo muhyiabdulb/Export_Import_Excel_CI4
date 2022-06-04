@@ -20,7 +20,6 @@ class Import extends BaseController
         $data = [
             'mahasiswas' => $this->Mahasiswa->findAll()
         ];
-
         return view("view_import", $data);
     }
 
@@ -103,7 +102,6 @@ class Import extends BaseController
     {
 
         $mahasiswa = $this->Mahasiswa->findAll();
-
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
         $spreadsheet->setActiveSheetIndex(0)
